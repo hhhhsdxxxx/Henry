@@ -19,7 +19,7 @@ MMU: GVA --> HPA 才能正常访存
 最土的方法: CR3永远指向一个页表基地址，截获 TLB 以及 cr3 寄存器操作。  
 TLB: VA --> PA 的快速查找表（类似于hash表），页表scan需要访问内存，对CPU来说是一种慢行为，且查找层数越多，性能越差. 切换页表或者页表项修改了，都会flush tlb。    
 Pagefault到Host看看guest有没有准备好 GVA --> GPA，没准备好让guest准备好，guest准备好了，但是真正硬件看的那个页表没有准备，又会fault出来。然后host将对应的表准备好。  
-TLB flush部分数据，说明guest内部某个页表项换了，host根据相关内容做对应修改。就是 GVA --> GPA_old ==> GVA --> GPA_new，将原来GVA对应的HPA_old改成HPA_new就行了。 
+TLB flush部分数据，说明guest内部某个页表项换了，host根据相关内容做对应修改。就是 GVA --> GPA_old ==> GVA --> GPA_new，将原来GVA对应的HPA_old改成HPA_new就行了。  
 TLB 全刷，那就是换进程了，这个表项全干掉就行了。所有重新来。  
 
 # 影子页表
