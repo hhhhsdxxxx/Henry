@@ -8,9 +8,14 @@ $x_0=0, \eta=0.05, $
 $f'(0)=2, x_1=0-0.05 \times 2=-0.1 $  
 $f'(-0.1)=1.8, x_2=-0.1-1.8 \times 0.05=-0.19 $  
 $x_3=-0.271, x_4=-0.3439, ..., x_{100}=-0.9999734386011123 $  
-![sgd_pic](https://pic1.zhimg.com/80/v2-8847409b4b6a4cd174b4b75b33b29725_1440w.webp?source=1940ef5c)  
+![sgd](https://nicky918.github.io/images/posts/2017/SGD-1.png)  
 可梯度求解的条件 L-Lipschitz continuous  
-存在常数 $L$，对于作用域 $D$ 任意 $x,y$ ， 总是满足 $||\nabla x - \nabla y|| \le L||x-y||$
+存在常数 $L$，对于作用域 $D$ 任意 $x,y$ ， 总是满足 $||\nabla x - \nabla y|| \le L||x-y||$  
+多维举例:  
+$f(x_0,x_1)=(x_0-4)^2+(x_1-2)^2, f'(x_0)=2(x_0-4),f'(x_1)=2(x_1-2) $  
+$x_0=0, x_1=0, \eta=0.05 $  
+对$x_0$的迭代公式 $x_n=x_{n-1}-0.05*2(x_{n-1}-4)$ 对$x_1$的迭代公式 
+
 
 
 # Softmax
