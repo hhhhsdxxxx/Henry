@@ -59,7 +59,13 @@ W_{58}=\begin{bmatrix}
 \end{bmatrix}
 ```
 
-
 # Softmax
+softmax用于多分类过程中，它将多个神经元的输出，映射到（0,1）区间内，可以看成概率来理解，从而来进行多分类  
+```math
+V=\begin{bmatrix}
+v_0, v_1, v_2, ... v_n
+\end{bmatrix},
+S_i = \frac{e^{v_i}}{\sum_{j}e^{v_j}}
+```
 # Cross Entropy Loss Function(交叉熵损失函数)
 # Word2Vec
