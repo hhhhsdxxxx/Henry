@@ -12,10 +12,52 @@ $x_3=-0.271, x_4=-0.3439, ..., x_{100}=-0.9999734386011123 $
 可梯度求解的条件 L-Lipschitz continuous  
 存在常数 $L$，对于作用域 $D$ 任意 $x,y$ ， 总是满足 $||\nabla x - \nabla y|| \le L||x-y||$  
 多维举例:  
-$f(x_0,x_1)=(x_0-4)^2+(x_1-2)^2, f'(x_0)=2(x_0-4),f'(x_1)=2(x_1-2) $  
-$x_0=0, x_1=0, \eta=0.05 $  
-对 $x_0$ 的迭代公式 $x_n=x_{n-1}-0.1(x_{n-1}-4)$ 对 $x_1$ 的迭代公式 $x_n=x_{n-1}-0.1(x_{n-1}-2)$  
+$f(x_0,x_1)=(x_0-4)^2+(x_1-2)^2 $  
 转换成矩阵的写法:  
+```math
+W=\begin{bmatrix}
+x_0\\
+x_1
+\end{bmatrix},
+A=\begin{bmatrix}
+4 \\
+2
+\end{bmatrix},
+f(W)=(W-A)^T(W-A),
+f'(W)=2(W-A),
+W_n=W_{n-1}-0.1(W-A),
+W_0=\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+```
+迭代过程:
+```math
+W_1=\begin{bmatrix}
+0.4 \\
+0.2
+\end{bmatrix},
+W_2=\begin{bmatrix}
+0.76 \\
+0.38
+\end{bmatrix},
+W_3=\begin{bmatrix}
+1.084 \\
+0.542
+\end{bmatrix},
+W_4=\begin{bmatrix}
+1.3756 \\
+0.6878
+\end{bmatrix},
+W_5=\begin{bmatrix}
+1.63804 \\
+0.81902
+\end{bmatrix},...
+W_{58}=\begin{bmatrix}
+3.99112588 \\
+1.99556294
+\end{bmatrix}
+```
 
 
 # Softmax
