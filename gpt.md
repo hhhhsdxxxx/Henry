@@ -85,4 +85,6 @@ Queen [0, 0, 1, 0]
 Woman [0, 0, 0, 1]  
 word vec:  
 ![w2v](https://ask.hellobi.com/uploads/article/20200509/hnnydodboo.webp)  
+通过计算能体现词之间的关系  
+![w2v_target](https://ask.hellobi.com/uploads/article/20200509/pwdnuspbqf.webp)  
 CBOW
