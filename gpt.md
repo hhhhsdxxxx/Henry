@@ -78,3 +78,11 @@ S_i = \frac{e^{v_i}}{\sum\limits_{j=0}^ne^{v_j}}
 另一个优点: 求导简单，最优化损失函数。
 
 # Word2Vec
+one-shot  
+King  [1, 0, 0, 0]  
+Man   [0, 1, 0, 0]  
+Queen [0, 0, 1, 0]  
+Woman [0, 0, 0, 1]  
+word vec:  
+![w2v](https://ask.hellobi.com/uploads/article/20200509/hnnydodboo.webp)  
+CBOW
