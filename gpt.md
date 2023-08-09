@@ -91,4 +91,5 @@ word vec:
 输入层：一个形状为C×V的one-hot张量，其中C代表上线文中词的个数，通常是一个偶数，我们假设为4；V表示词表大小，我们假设为5000，该张量的每一行都是一个上下文词的one-hot向量表示，比如“Pineapples, are, and, yellow”。  
 隐藏层：一个形状为V×N的参数张量W1，一般称为word-embedding，N表示每个词的词向量长度，我们假设为128。输入张量和word embedding W1进行矩阵乘法，就会得到一个形状为C×N的张量。综合考虑上下文中所有词的信息去推理中心词，因此将上下文中C个词相加得一个1×N的向量，是整个上下文的一个隐含表示。  
 输出层： 创建另一个形状为N×V的参数张量，将隐藏层得到的1×N的向量乘以该N×V的参数张量，得到了一个形状为1×V的向量。最终，1×V的向量代表了使用上下文去推理中心词，每个候选词的打分，再经过softmax函数的归一化，即得到了对中心词的推理概率：  
-![cbow](https://ucc.alicdn.com/images/user-upload-01/15175257fc6f4bf5924bbabb01f81388.png)
+![cbow](https://ucc.alicdn.com/images/user-upload-01/15175257fc6f4bf5924bbabb01f81388.png)  
+https://github.com/FraLotito/pytorch-continuous-bag-of-words/blob/master/cbow.py
