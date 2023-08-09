@@ -24,7 +24,7 @@ A=\begin{bmatrix}
 \end{bmatrix},
 f(W)=(W-A)^T(W-A),
 f'(W)=2(W-A),
-W_n=W_{n-1}-0.1(W-A),
+W_n=W_{n-1}-0.1(W_{n-1}-A),
 W_0=\begin{bmatrix}
 0\\
 0
